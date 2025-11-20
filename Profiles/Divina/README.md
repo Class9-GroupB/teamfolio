@@ -67,7 +67,10 @@ Go to:
 
 S3 Bucket → Properties → Static Website Hosting → Endpoint
 
-🚀 Live Website
+
+    http://divina-teamfolio-profile.s3-website.ca-central-1.amazonaws.com
+    
+    🚀 Live Website
 
 Access the live profile page here: 
     [Divina Teamfolio Profile](http://divina-teamfolio-profile.s3-website.ca-central-1.amazonaws.com)
