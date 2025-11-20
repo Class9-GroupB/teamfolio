@@ -20,8 +20,7 @@ To preview the website locally, run a simple Python web server:
 python -m http.server 8000
 
 Then open your browser:
-
-👉 http://localhost:8000/
+    http://localhost:8000/
 
 This allows you to verify layout, styling, and functionality before deploying.
 
@@ -70,4 +69,5 @@ S3 Bucket → Properties → Static Website Hosting → Endpoint
 
 🚀 Live Website
 
-🔗 http://divina-teamfolio-profile.s3-website.ca-central-1.amazonaws.com
+Access the live profile page here: 
+    [Divina Teamfolio Profile](http://divina-teamfolio-profile.s3-website.ca-central-1.amazonaws.com)
