@@ -3,66 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Divina David | Teamfolio Profile</title>
+  <title>Divina David | Cloud & DevOps Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
+
 <body>
+  <!-- ===== HERO SECTION ===== -->
   <header class="hero">
     <img src="photo.jpg" alt="Divina David Photo" class="profile-photo" />
-    <h1>Divina David</h1>
-    <h3>Cloud & DevOps Enthusiast | AWS Learner</h3>
+    <h1 class="name">Divina David</h1>
+    <h3 class="tagline">Cloud & DevOps Enthusiast | AWS Practitioner</h3>
   </header>
 
   <main class="content">
+
+    <!-- ===== ABOUT ===== -->
     <section class="about">
       <h2>About Me</h2>
       <p>
-        Hello 👋 I’m Divina David, a passionate technology learner focusing on
-        <strong>cloud computing, DevOps automation, and scalable web solutions</strong>.
-        I’m currently part of the <em>Teamfolio AWS Cloud Deployment Project</em>.
+        I’m <strong>Divina David</strong>, a passionate Cloud & DevOps learner focused on building
+        scalable, automated, and production-ready solutions on AWS.
+        Currently contributing to the <em>Teamfolio AWS Cloud Deployment Platform</em> where I work with
+        EC2, ALB, S3, Auto Scaling, and monitoring workflows.
       </p>
     </section>
 
+    <!-- ===== SKILLS MATRIX ===== -->
     <section class="skills">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li>Amazon Web Services (EC2, S3, CloudFront, Route 53)</li>
-        <li>Linux & Shell Scripting</li>
-        <li>Git, GitHub, CI/CD (GitHub Actions)</li>
-        <li>HTML, CSS, JavaScript, Node.js</li>
-      </ul>
+      <h2>Skills Matrix</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-box">
+          <h3>Cloud & DevOps</h3>
+          <ul>
+            <li>AWS EC2, ALB, Auto Scaling</li>
+            <li>Route 53 & ACM (SSL/TLS)</li>
+            <li>S3 & CloudFront</li>
+            <li>CloudWatch (Basic Monitoring)</li>
+            <li>CI/CD – GitHub Actions (Learning)</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Programming</h3>
+          <ul>
+            <li>Bash Scripting</li>
+            <li>Python (Basics)</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Collaboration & Tools</h3>
+          <ul>
+            <li>Git & GitHub</li>
+            <li>Jira</li>
+            <li>Confluence Documentation</li>
+          </ul>
+        </div>
+
+      </div>
     </section>
 
+    <!-- ===== PROJECTS ===== -->
     <section class="projects">
-      <h2>Recent Projects</h2>
+      <h2>Projects</h2>
+
       <div class="card">
-        <h3>Teamfolio Cloud Deployment</h3>
+        <h3>Teamfolio (AWS Portfolio Platform)</h3>
         <p>
-          Built and deployed a personal profile page on AWS using S3 and CloudFront with HTTPS,
-          integrated into a team-scale architecture via ALB and Auto Scaling.
+          A group project hosted fully on AWS using EC2 instances behind an Application Load Balancer
+          with Auto Scaling. Includes team and individual profile pages, secure HTTPS support, and
+          documentation in Confluence.
         </p>
+        <p class="tags">AWS • EC2 • ALB • Auto Scaling • S3</p>
+        <a class="btn" href="https://github.com/Class9-GroupB/teamfolio/tree/main/Profiles/Divina" target="_blank">
+          View on GitHub →
+        </a>
       </div>
+
       <div class="card">
-        <h3>AWS Monitoring Dashboard</h3>
+        <h3>DevOps / Automation Exercises</h3>
         <p>
-          Configured CloudWatch metrics to monitor EC2 health, ALB latency, and custom application logs.
+          A collection of automation scripts for deployment, environment setup, and system checks.
+          Focused on reusable workflows and team-friendly documentation. 
         </p>
+        <p class="tags">Bash • Git • Automation</p>
+        <a class="btn" href="https://github.com/Class9-GroupB/team4tech-groupb-automationscripts/tree/main/members/Divina" target="_blank">
+          View on GitHub →
+        </a>
       </div>
+
     </section>
 
+    <!-- ===== CONTACT ===== -->
     <section class="contact">
       <h2>Connect with Me</h2>
       <p>
-        📧 Email: <a href="mailto:divinakadavid@gmail.com">divinakadavid@gmail.com</a><br />
-        💼 LinkedIn: <a href="https://www.linkedin.com/in/divina-keerthi-anisha-david-2ab36598/">linkedin.com/in/divina-keerthi-anisha-david-2ab36598/</a><br />
-        🧑‍💻 GitHub: <a href="https://github.com/DivinaDavid">github.com/DivinaDavid</a>
+        📧 Email: <a href="mailto:divinakadavid@gmail.com">divinakadavid@gmail.com</a><br>
+        💼 LinkedIn: 
+        <a href="https://www.linkedin.com/in/divina-keerthi-anisha-david-2ab36598/" target="_blank">
+          linkedin.com/in/divina-keerthi-anisha-david
+        </a><br>
+        🧑‍💻 GitHub: 
+        <a href="https://github.com/DivinaDavid" target="_blank">github.com/DivinaDavid</a>
       </p>
     </section>
+
   </main>
 
   <footer>
-    <p>© 2025 Divina David | Teamfolio Project</p>
+    <p>© 2025 Divina David | Cloud & DevOps Portfolio</p>
   </footer>
+
 </body>
 </html>
