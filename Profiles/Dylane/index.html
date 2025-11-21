@@ -1,232 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Dylan Laconscience | Cloud & Software Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Personal profile site for Dylan Laconscience – cloud & software developer, AWS and DevOps enthusiast."
-  />
-  <style>
-    :root {
-      --bg: #f3f4f6;
-      --bg-alt: #ffffff;
-      --card: #ffffff;
-      --border: #e5e7eb;
-      --text: #111827;
-      --muted: #6b7280;
-      --accent: #2563eb;
-      --accent-soft: #dbeafe;
-      --accent2: #10b981;
-      --radius-lg: 16px;
-      --radius-pill: 999px;
-      --shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.08);
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background:
-        radial-gradient(circle at top left, #e5f2ff, #f9fafb 45%),
-        radial-gradient(circle at bottom right, #dcfce7, #f3f4f6 60%);
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    .container { max-width: 960px; margin: 0 auto; padding: 0 1.25rem 2.5rem; }
-
-    header {
-      position: sticky; top: 0; z-index: 20;
-      backdrop-filter: blur(10px);
-      background: linear-gradient(to bottom, rgba(255,255,255,0.92), rgba(255,255,255,0.85), transparent);
-      border-bottom: 1px solid #e5e7eb;
-    }
-    .header-inner { max-width: 960px; margin: 0 auto; padding: 0.8rem 1.25rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
-    .brand h1 { font-size: 1.05rem; text-transform: uppercase; color: #111827; }
-    .brand span { font-size: 0.8rem; color: var(--muted); }
-    nav { display: flex; gap: 1rem; font-size: 0.85rem; }
-    nav a { color: var(--muted); font-weight: 500; }
-    nav a:hover { color: var(--accent); }
-    @media (max-width: 640px) { nav { display: none; } }
-
-    .hero { padding: 3rem 0 2rem; }
-    .hero-inner { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.5fr); gap: 2rem; align-items: center; }
-    @media (max-width: 840px) { .hero-inner { grid-template-columns: minmax(0, 1fr); } }
-    .hero-title { font-size: clamp(2rem, 3.2vw, 2.6rem); line-height: 1.15; margin-bottom: 0.6rem; color: #0f172a; }
-    .hero-highlight { background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .hero-subtitle { font-size: 0.98rem; color: var(--muted); margin-bottom: 1.4rem; max-width: 32rem; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.3rem; }
-    .btn { border-radius: var(--radius-pill); padding: 0.55rem 1.2rem; font-size: 0.88rem; font-weight: 600; border: 1px solid transparent; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; }
-    .btn-primary { background: linear-gradient(90deg, var(--accent), #1d4ed8); color: #fff; box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25); }
-    .btn-secondary { background: #fff; border-color: #d1d5db; color: #111827; }
-    .btn-secondary:hover { background: #f3f4f6; }
-    .hero-meta { display: flex; flex-wrap: wrap; gap: 1.2rem; font-size: 0.8rem; color: var(--muted); }
-    .hero-meta span strong { display: block; color: #111827; font-size: 0.9rem; }
-    .hero-photo-card { border-radius: 20px; background: var(--card); border: 1px solid var(--border); padding: 1.4rem 1.3rem; box-shadow: var(--shadow-soft); text-align: center; }
-    .profile-photo { width: 120px; height: 120px; border-radius: 999px; margin: 0 auto 0.9rem; overflow: hidden; border: 3px solid #fff; box-shadow: 0 0 0 3px var(--accent-soft); background: #e5e7eb; }
-    .profile-photo img { width: 100%; height: 100%; object-fit: cover; }
-    .photo-caption { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.5rem; }
-    .location { font-size: 0.8rem; color: #4b5563; }
-
-    section { padding: 1.6rem 0 0; }
-    section + section { margin-top: 0.5rem; }
-    .section-header { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 0.8rem; align-items: baseline; }
-    .section-title { font-size: 1.1rem; font-weight: 600; color: #111827; }
-    .section-subtitle { font-size: 0.85rem; color: var(--muted); max-width: 28rem; }
-    .card { border-radius: var(--radius-lg); border: 1px solid var(--border); background: var(--card); padding: 1rem 1rem 1.1rem; box-shadow: var(--shadow-soft); }
-    .about-text { font-size: 0.92rem; color: var(--muted); }
-
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; font-size: 0.85rem; }
-    .skills-col h3 { font-size: 0.9rem; margin-bottom: 0.3rem; color: #111827; }
-    .skill-pill { display: inline-block; border-radius: var(--radius-pill); padding: 0.18rem 0.6rem; border: 1px solid #e5e7eb; font-size: 0.78rem; color: #4b5563; margin: 0.1rem; background: #f9fafb; }
-    .skill-pill--strong { border-color: rgba(37, 99, 235, 0.7); background: var(--accent-soft); color: #1d4ed8; }
-
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.9rem; font-size: 0.85rem; }
-    .project-card { border-radius: var(--radius-lg); border: 1px solid #e5e7eb; background: #fff; padding: 0.9rem 0.95rem; box-shadow: var(--shadow-soft); }
-    .project-card h3 { font-size: 0.95rem; margin-bottom: 0.2rem; color: #111827; }
-    .project-meta { display: flex; justify-content: space-between; gap: 0.5rem; font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem; }
-    .project-tag { border-radius: var(--radius-pill); padding: 0.12rem 0.55rem; border: 1px solid #e5e7eb; background: #f9fafb; }
-    .project-meta a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
-
-    .contact-links { display: flex; flex-wrap: wrap; gap: 0.6rem; font-size: 0.85rem; }
-    .contact-chip { border-radius: var(--radius-pill); padding: 0.35rem 0.85rem; border: 1px solid #e5e7eb; display: inline-flex; align-items: center; gap: 0.35rem; color: var(--muted); background: #fff; }
-    .contact-chip strong { color: #111827; font-size: 0.82rem; }
-
-    footer { border-top: 1px solid #e5e7eb; margin-top: 2.3rem; padding: 1.1rem 0 1.4rem; font-size: 0.78rem; color: var(--muted); background: rgba(255,255,255,0.8); }
-    .footer-inner { max-width: 960px; margin: 0 auto; padding: 0 1.25rem; display: flex; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dylane Elaliba - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #1a73e8;
+            padding: 50px 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .header-text {
+            max-width: 600px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+        .header-image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+        }
+        .header-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #1a73e8;
+            margin-bottom: 15px;
+        }
+        ul {
+            line-height: 1.8;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #eee;
+            margin-top: 40px;
+        }
+        a {
+            text-decoration: none;
+        }
+        .profile-links a {
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .skill-matrix {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-matrix div {
+            flex: 1 1 45%;
+            background: #e1f0ff;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .focus, .location {
+            margin-top: 10px;
+            font-style: italic;
+            color: #fff;
+        }
+        @media(max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-image-container {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <div class="brand">
-        <h1>Dylan Laconscience</h1>
-        <span>Cloud & Software Developer · Team4Tech</span>
-      </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="hero">
-      <div class="hero-inner">
-        <div>
-          <h2 class="hero-title">
-            Building scalable solutions in the
-            <span class="hero-highlight">cloud</span>.
-          </h2>
-          <p class="hero-subtitle">
-            I’m <strong>Dylan Laconscience</strong>, a cloud-minded software developer
-            with experience in AWS, DevOps, and web applications.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View projects</a>
-            <a href="#contact" class="btn btn-secondary">Connect</a>
-          </div>
-          <div class="hero-meta">
-            <span><strong>Focus</strong>AWS · DevOps · Web Apps</span>
-            <span><strong>Background</strong>IT / Software Developer · Bilingual EN/FR</span>
-          </div>
+    <header>
+        <div class="header-text">
+            <h1>Dylane Elaliba</h1>
+            <p>Cloud & DevOps Engineer · Middleware Administrator · Linux Specialist</p>
+            <p class="focus">Focus: AWS · DevOps · Web Applications</p>
+            <p class="location">📍 Based in United States · Available for cloud & Dev roles</p>
         </div>
-        <aside class="hero-photo-card">
-          <div class="profile-photo">
-            <img src="profile_pic.jpg" alt="Photo of Dylan Laconscience" />
-          </div>
-          <p class="photo-caption">Always learning and building.</p>
-          <p class="location">��� Washington, D.C. · Available for cloud & dev roles</p>
-        </aside>
-      </div>
+        <div class="header-image-container">
+            <!-- Profile Picture -->
+            <img src="profile-picture.jpg" alt="Dylane Elaliba" class="header-img" />
+        </div>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>I’m <strong>Dylane Elaliba</strong>, a cloud-minded & DevOps engineer with expertise in WebLogic, Linux administration. I enjoy turning complex infrastructure and application challenges into well-documented, reliable solutions.</p>
     </section>
 
-    <section id="about">
-      <div class="section-header">
-        <h2 class="section-title">About</h2>
-      </div>
-      <div class="card">
-        <p class="about-text">
-          Computer Programming graduate with hands-on experience in cloud infrastructure, web applications, and DevOps practices. I enjoy building reliable, well-documented solutions and learning new technologies every day.
-        </p>
-      </div>
+    <section>
+        <h2>Technical Skills</h2>
+        <p>From robust cloud architectures to finely-tuned application servers, I thrive on building, optimizing, and automating systems that just work. Here’s what I bring to the table:</p>
+        <div class="skill-matrix">
+            <div>Linux System Administration – mastering commands, Ubuntu & shell scripting</div>
+            <div>WebLogic & WebSphere Administration – deployment, tuning, and troubleshooting</div>
+            <div>Cloud & DevOps – AWS EC2, ALB, ASG, S3, CloudFront, CloudWatch</div>
+            <div>Networking & Security – Route 53, ACM, and cloud architecture best practices</div>
+            <div>Web Server Management – Apache, IIS, and performance optimization</div>
+            <div>Application Deployment – J2EE WAR, EAR, JAR with CI/CD pipelines</div>
+            <div>Monitoring & Automation – WebLogic scripting tools and proactive system tuning</div>
+            <div>Collaboration & Documentation – Jira, Confluence, Microsoft Teams</div>
+            <div>Version Control & DevOps Tools – Git, GitHub, and automated workflows</div>
+        </div>
     </section>
 
-    <section id="skills">
-      <div class="section-header">
-        <h2 class="section-title">Skills matrix</h2>
-      </div>
-      <div class="card">
-        <div class="skills-grid">
-          <div class="skills-col">
-            <h3>Cloud & DevOps</h3>
-            <span class="skill-pill skill-pill--strong">AWS EC2 / ALB / ASG</span>
-            <span class="skill-pill">Route 53 & ACM</span>
-            <span class="skill-pill">S3 & CloudFront</span>
-            <span class="skill-pill">CI/CD / GitHub Actions</span>
-          </div>
-          <div class="skills-col">
-            <h3>Programming</h3>
-            <span class="skill-pill skill-pill--strong">C / C++</span>
-            <span class="skill-pill skill-pill--strong">JavaScript</span>
-            <span class="skill-pill">HTML / CSS</span>
-            <span class="skill-pill">Node.js / Express</span>
-          </div>
-          <div class="skills-col">
-            <h3>Tools & Collaboration</h3>
-            <span class="skill-pill">Git & GitHub</span>
-            <span class="skill-pill">Jira & Confluence</span>
-            <span class="skill-pill">Linux / CLI</span>
-          </div>
-        </div>
-      </div>
+    <section>
+        <h2>Projects</h2>
+        <p>From cloud infrastructure to automation and full-stack applications, I build solutions that are scalable, reliable, and production-ready:</p>
+        <ul>
+            <li><strong>Teamfolio (AWS Portfolio Platform)</strong> – A high-availability team portfolio site leveraging EC2, Auto Scaling, Load Balancing, and HTTPS for seamless performance.</li>
+            <li><strong>Automation & DevOps Scripts</strong> – Streamlined deployments and environment setups with reusable scripts, saving time and reducing errors.</li>
+            <li><strong>Web Applications</strong> – J2EE and full-stack apps with WAR/EAR deployments, monitoring, and performance optimization for real-world use.</li>
+        </ul>
     </section>
 
-    <section id="projects">
-      <div class="section-header">
-        <h2 class="section-title">Projects</h2>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Teamfolio AWS Portfolio</h3>
-          <p>Group project on AWS using EC2, ALB, Auto Scaling, and S3 for portfolio hosting.</p>
-          <div class="project-meta">
-            <span class="project-tag">AWS · EC2 · S3</span>
-          </div>
+    <section id="profile" class="text-center my-8">
+        <h2 class="text-2xl font-semibold mb-4">Connect with Me</h2>
+        <div class="profile-links flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+            <a href="https://www.linkedin.com/in/dylane-elaliba-139b35248/" 
+               class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+               LinkedIn
+            </a>
+            <a href="https://github.com/dylaneelaliba69" 
+               class="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition">
+               GitHub
+            </a>
+            <a href="mailto:dylaneelaliba69@gmail.com" 
+               class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition">
+               Email Me
+            </a>
         </div>
-        <div class="project-card">
-          <h3>MERN Web App</h3>
-          <p>Full-stack app demonstrating CRUD operations and API integration.</p>
-          <div class="project-meta">
-            <span class="project-tag">JavaScript · Node · MongoDB</span>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section id="contact">
-      <div class="section-header">
-        <h2 class="section-title">Contact & Links</h2>
-      </div>
-      <div class="card">
-        <div class="contact-links">
-          <a class="contact-chip" href="https://github.com/dylan" target="_blank"><strong>GitHub</strong></a>
-          <a class="contact-chip" href="https://linkedin.com/in/dylan" target="_blank"><strong>LinkedIn</strong></a>
-          <a class="contact-chip" href="mailto:dylan@example.com"><strong>Email</strong></a>
+    <section id="contact" class="py-12 bg-gray-50">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-6">Get in Touch</h2>
+            <p class="mb-8 text-gray-700">I’m always open to discussing cloud, DevOps, or exciting project opportunities. Drop me a message and I’ll get back to you!</p>
+            <form action="#" method="POST" class="space-y-4">
+                <input type="text" name="name" placeholder="Dylane Elaliba" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                <input type="email" name="email" placeholder="your.email@example.com" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                <textarea name="message" rows="5" placeholder="Your Message" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                <button type="submit" class="w-full p-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition">Send Message</button>
+            </form>
         </div>
-      </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="footer-inner">
-      <p>&copy; 2025 Dylan Laconscience. All rights reserved.</p>
-    </div>
-  </footer>
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <p>© 2025 <strong>Dylane Elaliba</strong>. All Rights Reserved.</p>
+        <p class="text-gray-400 mt-2 text-sm">Part of a cloud & DevOps portfolio showcasing AWS deployment, scalability, and documentation.</p>
+    </footer>
 </body>
 </html>
