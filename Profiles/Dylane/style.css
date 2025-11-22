@@ -1,0 +1,120 @@
+/* --------------------------- style.css --------------------------- */
+body {
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(to right, #e0f7fa, #fce4ec);
+color: #333;
+}
+
+header {
+background: linear-gradient(135deg, #6a1b9a, #ab47bc);
+padding: 40px 50px;
+color: #fff;
+}
+
+.container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.intro h1 {
+margin: 0;
+font-size: 46px;
+color: #fff;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.intro p {
+margin-top: 10px;
+font-size: 18px;
+color: #ffe082;
+}
+
+.profile-wrapper {
+width: 170px;
+height: 170px;
+border-radius: 50%;
+overflow: hidden;
+border: 5px solid #ffca28;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-wrapper:hover {
+transform: scale(1.1);
+box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.profile-pic {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+display: block;
+}
+
+section {
+padding: 50px 20px;
+max-width: 900px;
+margin: auto;
+}
+
+.card {
+background: linear-gradient(145deg, #fff9c4, #ffe0b2);
+border-radius: 14px;
+padding: 25px;
+margin-bottom: 25px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+opacity: 0;
+animation: fadeIn 1.2s ease-in forwards;
+border-left: 6px solid #ff6f00;
+}
+
+.skills {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+gap: 15px;
+}
+
+.skill {
+background: #b2dfdb;
+padding: 12px;
+border-radius: 10px;
+text-align: center;
+font-weight: bold;
+transition: 0.3s;
+color: #004d40;
+}
+
+.skill:hover {
+background: #26a69a;
+color: #fff;
+transform: scale(1.05);
+}
+
+footer {
+text-align: center;
+padding: 25px;
+background: linear-gradient(135deg, #6a1b9a, #ab47bc);
+color: #fff;
+margin-top: 30px;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(15px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+a {
+color: #ff7043;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
