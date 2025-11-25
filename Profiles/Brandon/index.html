@@ -3,386 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Brandon Randell - Cloud Engineer | AWS Specialist | Team4Tech Member">
-    <meta name="author" content="Brandon Randell">
-    <title>Brandon Randell - Cloud Engineer Portfolio</title>
+    <title>Brandon Randell | Cloud Architect</title>
+    
     <link rel="stylesheet" href="style.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">Brandon Randell</div>
-            <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="/" class="btn-outline">Back to Team</a></li>
-            </ul>
-        </div>
+        <div class="logo">BR.</div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="hover-link">Home</a></li>
+            <li><a href="#about" class="hover-link">About</a></li>
+            <li><a href="#skills" class="hover-link">Expertise</a></li>
+            <li><a href="#projects" class="hover-link">Work</a></li>
+            <li><a href="#contact" class="btn-nav">Contact</a></li>
+        </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content fade-in">
-                <img src="photo.jpg" alt="Brandon Randell" class="profile-photo">
-                <h1>Brandon Randell</h1>
-                <p class="tagline">Cloud Engineer | AWS Solutions Architect | DevOps Enthusiast</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn-primary">Get in Touch</a>
-                    <a href="https://github.com/BrandoMan1" target="_blank" class="btn-secondary">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/brandon-randell" target="_blank" class="btn-secondary">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                        LinkedIn
-                    </a>
-                </div>
+    <header id="hero" class="hero-section">
+        <div class="hero-content">
+            <p class="pre-title fade-in">Cloud Engineer | AWS Solutions Architect</p>
+            <h1 class="hero-title fade-in">
+                Brandon <br>
+                <span class="gold-text">Randell.</span>
+            </h1>
+            <p class="hero-subtitle fade-in">
+                Architecting resilient cloud infrastructures where scalability meets security. 
+                I bridge the gap between complex system architecture and seamless operational efficiency.
+            </p>
+            <div class="hero-buttons fade-in">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
             </div>
         </div>
-    </section>
+        
+        <!-- Decorative Background Element -->
+        <div class="gold-circle"></div>
+    </header>
 
     <!-- About Section -->
-    <section id="about" class="section fade-in">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p class="lead">
-                    I'm a passionate Cloud Engineer specializing in AWS infrastructure and DevOps practices. 
-                    As a member of Team4Tech, I contribute to building scalable, secure, and highly available 
-                    cloud solutions.
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <!-- Image Side -->
+            <div class="about-image reveal">
+                <div class="image-wrapper">
+                    <!-- Placeholder Photo -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Brandon Randell">
+                </div>
+                <div class="image-frame"></div>
+            </div>
+
+            <!-- Text Side -->
+            <div class="about-text reveal">
+                <p class="gold-subtitle">The Architect</p>
+                <h2>Precision in <br>Every Deployment.</h2>
+                <p class="about-bio">
+                    I am Brandon Randell, a Cloud Engineer dedicated to modernizing the way businesses scale. 
+                    <br><br>
+                    With a deep focus on <strong>DevOps methodologies</strong> and <strong>AWS ecosystems</strong>, I transform static infrastructure into dynamic, automated environments. I don't just build systems; I engineer resilience.
                 </p>
-                <p>
-                    My expertise lies in designing and implementing cloud-native architectures, automating 
-                    infrastructure with Infrastructure as Code (IaC), and ensuring robust CI/CD pipelines. 
-                    I thrive on solving complex problems and continuously learning new technologies to stay 
-                    at the forefront of cloud computing.
-                </p>
-                <p>
-                    Currently working on the Teamfolio project, where we've built a production-ready web 
-                    application on AWS using EC2, Auto Scaling, Application Load Balancers, Route 53, 
-                    CloudFront, and comprehensive monitoring with CloudWatch.
-                </p>
+                <div class="about-meta">
+                    <div class="meta-item">
+                        <span>Location</span>
+                        <p>Toronto, Canada</p>
+                    </div>
+                    <div class="meta-item">
+                        <span>Experience</span>
+                        <p>1+ Years</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-secondary">Download Resume</a>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section section-alt fade-in">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>☁️ Cloud Platforms</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">EC2</span>
-                        <span class="skill-tag">S3</span>
-                        <span class="skill-tag">VPC</span>
-                        <span class="skill-tag">Route 53</span>
-                        <span class="skill-tag">CloudFront</span>
-                        <span class="skill-tag">CloudWatch</span>
-                        <span class="skill-tag">IAM</span>
-                        <span class="skill-tag">Auto Scaling</span>
-                        <span class="skill-tag">ALB/ELB</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>🛠️ DevOps & Tools</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Terraform</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">GitHub Actions</span>
-                        <span class="skill-tag">CI/CD</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Jenkins</span>
-                        <span class="skill-tag">Ansible</span>
-                        <span class="skill-tag">Linux/Ubuntu</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>💻 Programming & Scripting</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Bash</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>📊 Monitoring & Security</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">CloudWatch</span>
-                        <span class="skill-tag">Prometheus</span>
-                        <span class="skill-tag">Grafana</span>
-                        <span class="skill-tag">k6 Load Testing</span>
-                        <span class="skill-tag">SSL/TLS</span>
-                        <span class="skill-tag">Security Groups</span>
-                        <span class="skill-tag">SSM</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>📁 Project Management</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Jira</span>
-                        <span class="skill-tag">Confluence</span>
-                        <span class="skill-tag">Agile/Scrum</span>
-                        <span class="skill-tag">Documentation</span>
-                    </div>
-                </div>
-            </div>
+    <!-- Skills Matrix -->
+    <section id="skills" class="skills-section">
+        <div class="section-header reveal">
+            <h2>Technical Matrix</h2>
+            <div class="line"></div>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section fade-in">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">🚀</div>
-                    <h3>Teamfolio AWS Deployment</h3>
-                    <p class="project-description">
-                        Architected and deployed a highly available, auto-scaling web application on AWS. 
-                        Implemented multi-AZ infrastructure with EC2, ALB, and Auto Scaling Groups. 
-                        Achieved 99.9% uptime with comprehensive monitoring and alerting.
-                    </p>
-                    <div class="project-tech">
-                        <span>AWS</span>
-                        <span>Terraform</span>
-                        <span>EC2</span>
-                        <span>ALB</span>
-                        <span>Route 53</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/team4tech/teamfolio" target="_blank">
-                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            View Code
-                        </a>
-                        <a href="https://teamfolio.example.com" target="_blank">Live Demo →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">🔄</div>
-                    <h3>CI/CD Pipeline Automation</h3>
-                    <p class="project-description">
-                        Built automated deployment pipeline using GitHub Actions. Implemented zero-downtime 
-                        rolling deployments with automated testing, artifact management, and infrastructure 
-                        updates. Reduced deployment time from 30 minutes to 5 minutes.
-                    </p>
-                    <div class="project-tech">
-                        <span>GitHub Actions</span>
-                        <span>AWS</span>
-                        <span>Terraform</span>
-                        <span>Node.js</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/team4tech/teamfolio" target="_blank">
-                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">📊</div>
-                    <h3>CloudWatch Monitoring Dashboard</h3>
-                    <p class="project-description">
-                        Designed comprehensive monitoring solution with CloudWatch metrics, alarms, and 
-                        dashboards. Implemented automated alerting via SNS for critical infrastructure 
-                        events. Load tested to 200 RPS with <1% error rate.
-                    </p>
-                    <div class="project-tech">
-                        <span>CloudWatch</span>
-                        <span>SNS</span>
-                        <span>k6</span>
-                        <span>Monitoring</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#contact">Learn More →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">🌐</div>
-                    <h3>Multi-Region CDN Deployment</h3>
-                    <p class="project-description">
-                        Configured CloudFront distribution with S3 origin for global content delivery. 
-                        Implemented Origin Access Control, SSL certificates, and custom domain routing. 
-                        Reduced page load times by 60% for international users.
-                    </p>
-                    <div class="project-tech">
-                        <span>CloudFront</span>
-                        <span>S3</span>
-                        <span>ACM</span>
-                        <span>Route 53</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://brandon.teamfolio.example.com" target="_blank">Live Site →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section section-alt fade-in">
-        <div class="container">
-            <h2 class="section-title">Experience & Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Cloud Engineer - Team4Tech</h3>
-                        <p class="timeline-date">2025 - Present</p>
-                        <ul>
-                            <li>Architected multi-AZ AWS infrastructure serving 200+ concurrent users</li>
-                            <li>Implemented automated CI/CD pipelines reducing deployment time by 85%</li>
-                            <li>Led observability initiatives with CloudWatch monitoring and alerting</li>
-                            <li>Mentored team members on AWS best practices and IaC with Terraform</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>DevOps Engineering Student</h3>
-                        <p class="timeline-date">2024 - 2025</p>
-                        <ul>
-                            <li>Completed comprehensive AWS cloud computing curriculum</li>
-                            <li>Hands-on experience with EC2, VPC, IAM, S3, CloudFront, Route 53</li>
-                            <li>Learned Infrastructure as Code with Terraform and CloudFormation</li>
-                            <li>Practiced Agile methodologies using Jira and Confluence</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Key Achievements</h3>
-                        <ul>
-                            <li>🏆 Successfully deployed production-grade AWS infrastructure</li>
-                            <li>📈 Achieved 99.9% uptime with comprehensive monitoring</li>
-                            <li>⚡ Load tested to 200 RPS with <1% error rate</li>
-                            <li>🔐 Implemented security best practices (SSM, IAM, Security Groups)</li>
-                            <li>📚 Documented architecture and runbooks in Confluence</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Learning & Reflection Section -->
-    <section id="learning" class="section fade-in">
-        <div class="container">
-            <h2 class="section-title">Project Learnings & Reflection</h2>
-            <div class="learning-content">
-                <h3>What I Built</h3>
-                <p>
-                    As part of the Team4Tech Teamfolio project, I contributed to building a fully functional, 
-                    production-ready web application on AWS. My primary focus was on infrastructure design, 
-                    auto-scaling implementation, and ensuring high availability across multiple availability zones.
-                </p>
-                
-                <h3>Testing Auto-Scaling</h3>
-                <p>
-                    To validate our auto-scaling configuration, I conducted comprehensive load testing using k6. 
-                    I simulated traffic patterns ramping from 50 to 200 virtual users over a 14-minute period. 
-                    The key findings were:
-                </p>
+        
+        <div class="skills-grid reveal">
+            <div class="skill-group">
+                <h4>Cloud & Architecture</h4>
                 <ul>
-                    <li><strong>Scale-Up Behavior:</strong> When CPU utilization exceeded 70%, new instances launched within 5 minutes and became healthy, demonstrating responsive horizontal scaling.</li>
-                    <li><strong>Performance Under Load:</strong> At 200 RPS, we maintained p95 latency under 800ms with less than 0.03% error rate.</li>
-                    <li><strong>Resilience Testing:</strong> Terminated one instance during peak load - the ALB immediately stopped routing traffic to it, and the remaining instances handled the load without user impact.</li>
-                    <li><strong>Scale-Down:</strong> When load decreased, the cooldown period prevented premature termination, ensuring stability.</li>
+                    <li>AWS (EC2, S3, RDS, VPC)</li>
+                    <li>Lambda Serverless Computing</li>
+                    <li>IAM Security & Compliance</li>
+                    <li>Route53 & CloudFront</li>
                 </ul>
-
-                <h3>Key Lesson Learned</h3>
-                <div class="lesson-box">
-                    <p>
-                        <strong>The Power of Infrastructure as Code:</strong> Initially, I manually configured 
-                        resources in the AWS Console, which was time-consuming and error-prone. After switching 
-                        to Terraform, I could destroy and recreate the entire infrastructure in minutes with 
-                        consistency and documentation built-in.
-                    </p>
-                    <p>
-                        This taught me that while the learning curve for IaC tools is steeper upfront, the 
-                        long-term benefits in repeatability, version control, and collaboration far outweigh 
-                        the initial investment. Moving forward, I'll always start with IaC for any cloud project.
-                    </p>
-                </div>
-
-                <h3>Technical Challenges Overcome</h3>
+            </div>
+            <div class="skill-group">
+                <h4>DevOps & IaC</h4>
                 <ul>
-                    <li><strong>NAT Gateway Costs:</strong> Learned to balance high availability with budget constraints by implementing cost-saving strategies like scheduled scaling.</li>
-                    <li><strong>Health Check Tuning:</strong> Initially, health checks were too aggressive, causing unnecessary instance churn. Adjusted thresholds and grace periods for stability.</li>
-                    <li><strong>User Data Debugging:</strong> Troubleshooting failed instance launches taught me the importance of comprehensive logging and idempotent scripts.</li>
-                    <li><strong>Zero-Downtime Deployments:</strong> Implemented rolling updates with proper warmup periods and checkpoint delays to ensure seamless deployments.</li>
+                    <li>Terraform & CloudFormation</li>
+                    <li>Docker & Kubernetes (EKS)</li>
+                    <li>CI/CD (Jenkins, GitHub Actions)</li>
+                    <li>Ansible Automation</li>
+                </ul>
+            </div>
+            <div class="skill-group">
+                <h4>Scripting & Tools</h4>
+                <ul>
+                    <li>Python (Boto3 Automation)</li>
+                    <li>Bash / Shell Scripting</li>
+                    <li>Datadog & CloudWatch</li>
+                    <li>Git Version Control</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section section-alt fade-in">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-content">
-                <p class="lead">
-                    Interested in cloud infrastructure, DevOps, or want to discuss AWS best practices? 
-                    I'd love to hear from you!
-                </p>
-                <div class="contact-methods">
-                    <a href="mailto:brandon.randell@example.com" class="contact-card">
-                        <div class="contact-icon">📧</div>
-                        <h3>Email</h3>
-                        <p>brandon.randell@example.com</p>
-                    </a>
-                    <a href="https://github.com/brandonrandell" target="_blank" class="contact-card">
-                        <div class="contact-icon">💻</div>
-                        <h3>GitHub</h3>
-                        <p>@brandonrandell</p>
-                    </a>
-                    <a href="https://linkedin.com/in/brandonrandell" target="_blank" class="contact-card">
-                        <div class="contact-icon">💼</div>
-                        <h3>LinkedIn</h3>
-                        <p>/in/brandonrandell</p>
-                    </a>
+    <!-- Projects Gallery -->
+    <section id="projects" class="work-section">
+        <div class="section-header reveal">
+            <h2>Selected Projects</h2>
+            <div class="line"></div>
+        </div>
+        
+        <div class="gallery">
+            <!-- Project 1 -->
+            <div class="card reveal">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coding">
                 </div>
-                <div class="back-to-team">
-                    <a href="/" class="btn-primary-large">← Back to Team4Tech Teamfolio</a>
+                <div class="card-info">
+                    <h3> Teamfolio (AWS Portfolio Platform)</h3>
+                    <p>AWS / EC2 / ALB / Auto Scaling / S3</p>
+                    <div class="card-desc">A group project hosted fully on AWS using EC2 instances behind an Application Load Balancer
+          with Auto Scaling. Includes team and individual profile pages, secure HTTPS support, and
+          documentation in Confluence</div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card reveal">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1693917000983-3b48d0deff74?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Migration">
+                </div>
+                <div class="card-info">
+                    <h3> Environment Setup & Security Automator  </h3>
+                    <p>Bash / Linux / Automation / Jira / GitHub</p>
+                    <div class="card-desc">A secure, automated script that sets up a consistent development environment by installing required dependencies, generating project-specific configuration, and enforcing strict security permissions.</div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="card reveal">
+                <div class="card-image-wrapper">
+                    <img src="https://i.gyazo.com/9842e6cd48cb3cd364fd41f18aae799f.png" alt="DevSecOps">
+                </div>
+                <div class="card-info">
+                    <h3>Teamfolio Solutions</h3>
+                    <p>Frontend / UI Design / Deployment</p>
+                    <div class="card-desc">A modern corporate team portal featuring a glassmorphism UI, 8-member roster grid, and responsive tech stack showcase.</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Brandon Randell. Part of Team4Tech Teamfolio Project.</p>
-            <p class="footer-note">Deployed on AWS using EC2, S3, CloudFront, and Route 53</p>
+    <footer id="contact" class="footer-section">
+        <div class="footer-content reveal">
+            <p class="pre-title">Next Steps</p>
+            <h2 class="footer-title">Let's Build Something <br><span class="gold-text">Scalable.</span></h2>
+            
+            <p class="footer-text">
+                Open to cloud architecture opportunities and collaborations.
+            </p>
+
+            <a href="mailto:brandon@example.com" class="email-link">brandon@example.com</a>
+
+            <div class="social-links">
+                <a href="https://github.com/" target="_blank" class="social-btn">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/" target="_blank" class="social-btn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" target="_blank" class="social-btn">
+                    <i class="fa-solid fa-file-pdf"></i>
+                </a>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2024 Brandon Randell. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
