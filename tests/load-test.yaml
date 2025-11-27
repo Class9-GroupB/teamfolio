@@ -1,0 +1,26 @@
+config:
+  target: "https://teamfoliosolutions.com"
+  phases:
+    - duration: 60
+      arrivalRate: 5
+      name: Warm up
+    - duration: 120
+      arrivalRate: 20
+      rampTo: 50
+      name: Ramp up load
+    - duration: 600
+      arrivalRate: 100
+      name: Sustained Peak Load (DoD Requirement)
+
+scenarios:
+  - flow:
+      - get:
+          url: "/"
+      - think: 1
+      - get:
+          url: "/healthz"
+
+
+## To run this test, use the following command:
+# You will simply run `npm install -g artillery` if you haven't already installed Artillery.
+# Then `artillery run tests/load-test.yaml`

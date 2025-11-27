@@ -61,8 +61,8 @@
             <!-- Image Side -->
             <div class="about-image reveal">
                 <div class="image-wrapper">
-                    <!-- Placeholder Photo -->
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Brandon Randell">
+                    <!-- UPDATED: Pointing to a local file named photo.jpg -->
+                    <img src="photo.jpg" alt="Brandon Randell">
                 </div>
                 <div class="image-frame"></div>
             </div>
@@ -91,7 +91,7 @@
         </div>
     </section>
 
-    <!-- Skills Matrix -->
+    <!-- Skills Matrix (UPDATED: 4 Columns) -->
     <section id="skills" class="skills-section">
         <div class="section-header reveal">
             <h2>Technical Matrix</h2>
@@ -99,8 +99,9 @@
         </div>
         
         <div class="skills-grid reveal">
+            <!-- 1. Cloud Architecture -->
             <div class="skill-group">
-                <h4>Cloud & Architecture</h4>
+                <h4>Cloud Architecture</h4>
                 <ul>
                     <li>AWS (EC2, S3, RDS, VPC)</li>
                     <li>Lambda Serverless Computing</li>
@@ -108,28 +109,43 @@
                     <li>Route53 & CloudFront</li>
                 </ul>
             </div>
+
+            <!-- 2. DevOps & IaC -->
             <div class="skill-group">
                 <h4>DevOps & IaC</h4>
                 <ul>
                     <li>Terraform & CloudFormation</li>
                     <li>Docker & Kubernetes (EKS)</li>
-                    <li>CI/CD (Jenkins, GitHub Actions)</li>
                     <li>Ansible Automation</li>
+                    <li>Linux/Bash Administration</li>
                 </ul>
             </div>
+
+            <!-- 3. GitHub & Workflow (NEW) -->
             <div class="skill-group">
-                <h4>Scripting & Tools</h4>
+                <h4>GitHub & Workflow</h4>
                 <ul>
-                    <li>Python (Boto3 Automation)</li>
-                    <li>Bash / Shell Scripting</li>
-                    <li>Datadog & CloudWatch</li>
-                    <li>Git Version Control</li>
+                    <li>GitHub Actions (CI/CD Pipelines)</li>
+                    <li>Git Flow & Branch Strategy</li>
+                    <li>Pull Request (PR) Management</li>
+                    <li>Version Control Best Practices</li>
+                </ul>
+            </div>
+
+            <!-- 4. UI/UX Design (NEW) -->
+            <div class="skill-group">
+                <h4>UI/UX & Design</h4>
+                <ul>
+                    <li>Responsive Web Design</li>
+                    <li>Figma & Wireframing</li>
+                    <li>Glassmorphism & Dark UI</li>
+                    <li>User Journey Mapping</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Projects Gallery -->
+    <!-- Projects Gallery (UPDATED with Buttons & Padding) -->
     <section id="projects" class="work-section">
         <div class="section-header reveal">
             <h2>Selected Projects</h2>
@@ -140,38 +156,75 @@
             <!-- Project 1 -->
             <div class="card reveal">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coding">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1738&auto=format&fit=crop" alt="Coding">
                 </div>
-                <div class="card-info">
-                    <h3> Teamfolio (AWS Portfolio Platform)</h3>
+                <!-- Added inline padding just to be safe -->
+                <div class="card-info" style="padding: 40px;">
+                    <h3>Teamfolio (AWS Platform)</h3>
                     <p>AWS / EC2 / ALB / Auto Scaling / S3</p>
-                    <div class="card-desc">A group project hosted fully on AWS using EC2 instances behind an Application Load Balancer
-          with Auto Scaling. Includes team and individual profile pages, secure HTTPS support, and
-          documentation in Confluence</div>
+                    <div class="card-desc">
+                        A group project hosted fully on AWS using EC2 instances behind an Application Load Balancer
+                        with Auto Scaling. Includes team and individual profile pages, secure HTTPS support, and
+                        documentation in Confluence.
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <div class="project-links">
+                        <!-- Update with your Team Repo URL -->
+                        <a href="https://github.com/BrandoMan1" target="_blank" class="prj-btn">
+                            <i class="fa-brands fa-github"></i> Source Code
+                        </a>
+                        <!-- Update with your ALB URL if available -->
+                        <a href="#" target="_blank" class="prj-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <!-- Project 2 -->
             <div class="card reveal">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1693917000983-3b48d0deff74?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Migration">
+                    <img src="https://images.unsplash.com/photo-1693917000983-3b48d0deff74?q=80&w=1740&auto=format&fit=crop" alt="Migration">
                 </div>
-                <div class="card-info">
-                    <h3> Environment Setup & Security Automator  </h3>
-                    <p>Bash / Linux / Automation / Jira / GitHub</p>
-                    <div class="card-desc">A secure, automated script that sets up a consistent development environment by installing required dependencies, generating project-specific configuration, and enforcing strict security permissions.</div>
+                <div class="card-info" style="padding: 40px;">
+                    <h3>Environment Security Automator</h3>
+                    <p>Bash / Linux / Automation / GitHub</p>
+                    <div class="card-desc">
+                        A secure, automated script that sets up a consistent development environment by installing required dependencies, generating project-specific configuration, and enforcing strict security permissions.
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <div class="project-links">
+                        <a href="https://github.com/BrandoMan1" target="_blank" class="prj-btn">
+                            <i class="fa-brands fa-github"></i> View Script
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <!-- Project 3 -->
             <div class="card reveal">
                 <div class="card-image-wrapper">
+                    <!-- Update this to be a screenshot of your portfolio later -->
                     <img src="https://i.gyazo.com/9842e6cd48cb3cd364fd41f18aae799f.png" alt="DevSecOps">
                 </div>
-                <div class="card-info">
-                    <h3>Teamfolio Solutions</h3>
-                    <p>Frontend / UI Design / Deployment</p>
-                    <div class="card-desc">A modern corporate team portal featuring a glassmorphism UI, 8-member roster grid, and responsive tech stack showcase.</div>
+                <div class="card-info" style="padding: 40px;">
+                    <h3>Dark Luxury Portfolio</h3>
+                    <p>S3 / CloudFront / UI Design</p>
+                    <div class="card-desc">
+                        A modern corporate team portal featuring a glassmorphism UI, 8-member roster grid, and responsive tech stack showcase deployed via AWS Serverless architecture.
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <div class="project-links">
+                        <a href="https://github.com/BrandoMan1" target="_blank" class="prj-btn">
+                            <i class="fa-brands fa-github"></i> Source Code
+                        </a>
+                        <a href="https://dup1yszepvzv3.cloudfront.net" target="_blank" class="prj-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Site
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -190,10 +243,10 @@
             <a href="mailto:brandon@example.com" class="email-link">brandon@example.com</a>
 
             <div class="social-links">
-                <a href="https://github.com/" target="_blank" class="social-btn">
+                <a href="https://github.com/BrandoMan1" target="_blank" class="social-btn">
                     <i class="fa-brands fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/" target="_blank" class="social-btn">
+                <a href="https://www.linkedin.com/in/brandon-randell-603193185" target="_blank" class="social-btn">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
                 <a href="#" target="_blank" class="social-btn">
@@ -202,7 +255,7 @@
             </div>
 
             <div class="copyright">
-                <p>&copy; 2024 Brandon Randell. All Rights Reserved.</p>
+                <p>&copy; 2025 Brandon Randell. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
