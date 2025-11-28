@@ -1,0 +1,21 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- This recreates your linear-gradient(135deg...) -->
+        <linearGradient id="glassGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.4"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Layer 1: Back Square (Purple) 
+         Matches: background-color: #8b5cf6; border: rgba(255,255,255,0.2) -->
+    <rect x="21" y="21" width="35" height="35" rx="8" 
+          fill="#8b5cf6" 
+          stroke="white" stroke-opacity="0.2" stroke-width="1"/>
+
+    <!-- Layer 2: Front Square (Blue Glass) 
+         Matches: linear-gradient(...); border: rgba(255,255,255,0.6) -->
+    <rect x="11" y="11" width="35" height="35" rx="8" 
+          fill="url(#glassGradient)" 
+          stroke="white" stroke-opacity="0.5" stroke-width="1"/>
+</svg>
