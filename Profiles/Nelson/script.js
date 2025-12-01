@@ -10,4 +10,4 @@ function openTab(tabName) {
   document.getElementById(tabName).classList.add('active');
   document.querySelector(`[data-tab='${tabName}']`).classList.add('active');
 }
-
+.
