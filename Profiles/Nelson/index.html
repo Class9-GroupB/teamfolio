@@ -1,66 +1,110 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Nelson Ijenwa – Cloud Engineer</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(135deg, #0a1a33, #1b3b5f); color: #fff; text-align: center; line-height: 1.6; }
+.profile-pic { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 5px solid #b87333; margin-bottom: 20px; }
+h1 { font-size: 2.5rem; margin: 20px 0; font-weight:bold; color: #b87333; }
+h2 { color: #1e90ff; margin-top: 40px; margin-bottom: 20px; }
+.section { max-width: 800px; margin: 40px auto; padding: 20px; }
+ul { list-style: none; padding: 0; text-align: left; display: inline-block; }
+li { margin-bottom: 10px; }
+a { color: #b87333; word-break: break-all; }
+.fade-in { animation: fadeIn 1.5s ease-in-out; }
+@keyframes fadeIn {0% {opacity: 0;} 100% {opacity: 1;}}
+nav { background: #071226; padding: 15px; display: flex; justify-content: center; gap: 30px; position: sticky; top: 0; z-index: 1000; flex-wrap: wrap; }
+nav a { color: #b87333; text-decoration: none; font-weight: bold; padding: 8px 12px; }
+nav a:hover { text-decoration: underline; }
+.tab { display: inline-block; padding: 10px 20px; margin-right: 10px; background: #15325c; cursor: pointer; border-radius: 10px 10px 0 0; font-weight: 600; color: #dbeafe; margin-bottom: 10px; }
+.tab.active { background: #2563eb; color: white; }
+.tab-content { display: none; margin-top: 20px; text-align: left; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 10px; }
+.tab-content.active { display: block; }
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  .profile-pic { width: 140px; height: 140px; }
+  .section { margin: 20px; padding: 15px; }
+  nav { flex-direction: column; gap: 10px; }
+  .tab { width: 100%; text-align: center; margin-right: 0; }
+  ul { text-align: left; display: block; }
+  p { font-size: 0.9rem; }
+}
+@media screen and (max-width: 480px) {
+  h1 { font-size: 1.6rem; }
+  .profile-pic { width: 120px; height: 120px; }
+  p { font-size: 0.85rem; }
+}
+</style>
+<script>
+function openTab(tabName) {
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(tabName).classList.add('active');
+  document.querySelector(`[data-tab='${tabName}']`).classList.add('active');
+}
+</script>
 </head>
 <body>
 <nav>
-  <a href="#About">About</a> |
-  <a href="#Skills">Skills</a> |
-  <a href="#Experience">Experience</a> |
-  <a href="#Projects">Projects</a> |
-  <a href="#Contact">Contact</a>
+<a href="#about">About</a>
+<a href="#skills" onclick="openTab('skills')">Skills</a>
+<a href="#experience" onclick="openTab('experience')">Experience</a>
+<a href="#projects" onclick="openTab('projects')">Projects</a>
+<a href="#contact" onclick="openTab('contact')">Contact</a>
 </nav>
-<header>
-  <h1>Nelson Ijenwa</h1>
-  <img src="https://nelsonproject2025.s3.ca-central-1.amazonaws.com/nelsonijenwa.jpg" alt="Nelson Ijenwa">
-  <p>I am Nelson Ijenwa, a Cloud Engineer dedicated to designing and managing scalable, secure, and efficient AWS cloud infrastructures. I focus on automation, DevOps best practices, and cloud security, delivering reliable and high-performance solutions. Committed to continuous learning and innovation, I thrive in collaborative environments where problem-solving and operational excellence drive impactful results.</p>
-  <a href="#Skills">Skills</a> <a href="#Projects">Projects</a> <a href="#Experience">Experience</a> <a href="#Contact">Contact</a>
+<header class="fade-in" id="about">
+<h1>Nelson Ijenwa</h1>
+<div style="display:flex; gap:30px; justify-content:center; align-items:center; flex-wrap:wrap; margin-bottom:30px;">
+<img src="myphoto.jpg" alt="Nelson Ijenwa" style="width:180px; height:180px; border-radius:20px; object-fit:cover; border:4px solid #b87333;" />
+<p style="max-width:500px; text-align:left;">I am Nelson Ijenwa, a Cloud Engineer dedicated to designing and managing scalable, secure, and efficient AWS cloud infrastructures. I focus on automation, DevOps best practices, and cloud security, delivering reliable and high-performance solutions. Committed to continuous learning and innovation, I thrive in collaborative environments where problem-solving and operational excellence drive impactful results.</p>
+</div>
 </header>
-
-<section id="Skills">
-  <h2>Technical Skills</h2>
-  <ul>
-    <li>AWS Cloud Architecture (EC2, S3, IAM, Lambda, VPC)</li>
-    <li>Terraform & CloudFormation</li>
-    <li>Linux Administration</li>
-    <i>Docker & Kubernetes (EKS)</li>
-    <li>CI/CD (GitHub Actions, CodePipeline)</li>
-    <li>CloudWatch Monitoring & Logging</li>
-    <li>Networking & Security Groups</li>
-    <li>Python & Bash Automation</li>
-    <li>Security Hardening (IAM, KMS, MFA)</li>
-    <li>DevOps Toolchains</li>
-  </ul>
-</section>
-
-<section id="Projects">
-  <h2>Projects</h2>
-  <ul>
-    <li>AWS Auto Scaling Architecture: Built a scalable EC2 architecture with ALB + ASG.</li>
-    <li>CI/CD Pipeline: Automated deployments using GitHub Actions → EC2/S3.</li>
-    <li>Kubernetes Deployment: Deployed microservices on EKS using IaC.</li>
-    <li>Monitoring Stack: CloudWatch dashboards + alarms for production workloads.</li>
-    <li>Static Website Hosting Project: Successfully hosted a static website using AWS S3, CloudFront, Route 53, IAM, and Lambda for automation and security.</li>
-    <li>Automation Script Project: Developed an automation script that solved real-world operational problems, enhancing efficiency and reducing manual workload.</li>
-  </ul>
-</section>
-
-<section id="Experience">
-  <h2>Experience</h2>
-  <h3>Cloud Engineer – Teamfolio</h3>
-  <p>Designed and implemented scalable AWS cloud environments, automated deployment pipelines, managed Kubernetes workloads, implemented Infrastructure as Code using Terraform, and optimized monitoring and security practices to ensure operational excellence.</p>
-</section>
-<section id="Contact">
-  <h2>Contact Me</h2>
-  <p>Website: <a href="https://nelsonproject2025.s3.ca-central-1.amazonaws.com/index.htmlm</a></p>
-  <p>Phone: 647-501-4918</p>
-  <p>Email: nelsondevops51@gmail.com</p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/nelsonijenwa">linkedin.com/in/nelsonijenwa</a></p>
-</section>
-
-</body>
-</html>
-
+<div class="section">
+<span class="tab active" data-tab="skills" onclick="openTab('skills')">Skills</span>
+<span class="tab" data-tab="projects" onclick="openTab('projects')">Projects</span>
+<span class="tab" data-tab="experience" onclick="openTab('experience')">Experience</span>
+<span class="tab" data-tab="contact" onclick="openTab('contact')">Contact</span>
+<div id="skills" class="tab-content active">
+<h2>Technical Skills</h2>
+<ul>
+<li>AWS Cloud Architecture (EC2, S3, IAM, Lambda, VPC)</li>
+<li>Terraform & CloudFormation</li>
+<li>Linux Administration</li>
+<li>Docker & Kubernetes (EKS)</li>
+<li>CI/CD (GitHub Actions, CodePipeline)</li>
+<li>CloudWatch Monitoring & Logging</li>
+<li>Networking & Security Groups</li>
+<li>Python & Bash Automation</li>
+<li>Security Hardening (IAM, KMS, MFA)</li>
+<li>DevOps Toolchains</li>
+</ul>
+</div>
+<div id="projects" class="tab-content">
+<h2>Projects</h2>
+<ul>
+<li><strong>AWS Auto Scaling Architecture:</strong> Built a scalable EC2 architecture with ALB + ASG.</li>
+<li><strong>CI/CD Pipeline:</strong> Automated deployments using GitHub Actions → EC2/S3.</li>
+<li><strong>Kubernetes Deployment:</strong> Deployed microservices on EKS using IaC.</li>
+<li><strong>Monitoring Stack:</strong> CloudWatch dashboards + alarms for production workloads.</li>
+<li><strong>Static Website Hosting Project:</strong> Successfully hosted a static website using AWS S3, CloudFront, Route 53, IAM, and Lambda for automation and security.</li>
+<li><strong>Automation Script Project:</strong> Developed an automation script that solved real-world operational problems, enhancing efficiency and reducing manual workload.</li>
+</ul>
+</div>
+<div id="experience" class="tab-content">
+<h2>Experience</h2>
+<p><strong>Cloud Engineer – Teamfolio</strong></p>
+<p>Designed and implemented scalable AWS cloud environments, automated deployment pipelines, managed Kubernetes workloads, implemented Infrastructure as Code using Terraform, and optimized monitoring and security practices to ensure operational excellence.</p>
+</div>
+<div id="contact" class="tab-content">
+<h2>Contact Me</h2>
+<ul>
+<li><strong>Website:</strong> <a href="https://nelsonproject2025.s3.ca-central-1.amazonaws.com/index.html" target="_blank">https://nelsonproject2025.s3.ca-central-1.amazonaws.com/index.html>
+<li><strong>Phone:</strong> 123-456-7890</li>
+<li><strong>Email:</strong> <a href="mailto:nelsonije@gmail.com">nelsonije@gmail.com</a></li>
+<li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/feed/?trk=hb_signin" target="_blank">https://www.linkedin.com/feed/?trk=hb_signin
+</ul>
+</div>
+</div

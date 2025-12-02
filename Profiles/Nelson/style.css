@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0a1a33, #1b3b5f);
+  color: #fff;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #b87333;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  font-weight: bold;
+  color: #b87333;
+}
+
+h2 {
+  color: #1e90ff;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #b87333;
+  word-break: break-all;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+nav {
+  background: #071226;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #b87333;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.tab {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  background: #15325c;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+  font-weight: 600;
+  color: #dbeafe;
+  margin-bottom: 10px;
+}
+
+.tab.active {
+  background: #2563eb;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  margin-top: 20px;
+  text-align: left;
+  padding: 15px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  .profile-pic { width: 140px; height: 140px; }
+  .section { margin: 20px; padding: 15px; }
+  nav { flex-direction: column; gap: 10px; }
+  .tab { width: 100%; text-align: center; margin-right: 0; }
+  ul { display: block; text-align: left; }
+  p { font-size: 0.9rem; }
+}
+
+@media screen and (max-width: 480px) {
+  h1 { font-size: 1.6rem; }
+  .profile-pic { width: 120px; height: 120px; }
+  p { font-size: 0.85rem; }
+}
+css added.
