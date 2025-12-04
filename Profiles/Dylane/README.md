@@ -1,41 +1,73 @@
-# Dylane Elaliba Portfolio Website
+This repository contains the personal profile webpage for Dylane, built and deployed as part of a collaborative AWS-hosted portfolio ecosystem. It showcases cloud engineering, DevOps, and automation capabilities while demonstrating end-to-end deployment through AWS S3 static website hosting.
 
-This is the personal portfolio website of Dylane Elaliba, showcasing cloud computing and DevOps skills, projects, and contact information.
+───────────────────────────────────────────────
+��� Project Structure
+───────────────────────────────────────────────
+File            Purpose
+-------------------------------------------------
+index.html      Main profile webpage
+style.css       Custom styling, layout, and theme
+script.js       UI enhancements (fade-in animations)
+photo.jpg       Profile picture
+README.md       Documentation and deployment guide
 
-## ��� Live Website
+───────────────────────────────────────────────
+☁️ AWS Deployment Overview
+───────────────────────────────────────────────
+The webpage is deployed via AWS S3 Static Website Hosting using CLI automation.
 
-You can view the live website here:
+───────────────────────────────────────────────
+1️⃣ Configure AWS Credentials
+───────────────────────────────────────────────
+In AWS Console:
+  • Go to IAM → Users → Dylane
+  • Open Security Credentials
+  • Create a new Access Key
 
-��� **http://dylan-teamfolio-profile.s3-website-us-east-1.amazonaws.com**
+Configure AWS CLI:
 
-## ✨ Features
+    aws configure
 
-- Modern and responsive design with gradients and shadows.
-- Perfect circular profile picture with hover effect.
-- Animated fade-in cards for smooth visual appearance.
-- Skills section with interactive hover effects.
-- Smooth scrolling links for easy navigation.
+Enter:
+  • AWS Access Key
+  • AWS Secret Key
+  • Region: us-east-1
+  • Output format: json
 
-## ��� Installation
+───────────────────────────────────────────────
+2️⃣ Create the S3 Bucket
+───────────────────────────────────────────────
+In AWS Console:
+  • Bucket name: dylane-teamfolio-profile
+  • Enable ACLs
+  • Disable Block Public Access (all options)
+  • Save changes
 
-1. Clone or download the repository.
-2. Place your `profile.jpg` image in the root folder.
-3. Ensure `index.html`, `style.css`, and `javascript.js` are in the same directory.
-4. Open `index.html` in a browser or deploy to an S3 bucket for hosting.
+Ensure:
+  • Static Website Hosting is enabled
+  • Index document = index.html
 
-## ��� Usage
+───────────────────────────────────────────────
+3️⃣ Upload Website Files (Automation Script)
+───────────────────────────────────────────────
+Use the included upload script to sync all files:
 
-- Edit `index.html` to update your personal information, skills, and projects.
-- Customize colors and fonts in `style.css`.
-- Add additional interactivity in `javascript.js` if desired.
+    ./s3.sh
 
-## ☁️ Deployment (AWS S3)
+This performs an automated S3 sync and updates the live site instantly.
 
-1. Upload all files (`index.html`, `style.css`, `javascript.js`, `profile.jpg`) to the S3 bucket.
-2. Enable static website hosting on the S3 bucket.
-3. Configure public-read permission for the bucket or CloudFront setup.
-4. Your portfolio becomes accessible using the S3 website endpoint.
+───────────────────────────────────────────────
+4️⃣ Access the Live Static Website
+───────────────────────────────────────────────
+Find your endpoint at:
 
-## ��� License
+  S3 Bucket → Properties → Static Website Hosting
 
-This project is open-source and free to use for personal portfolio purposes.
+Or open:
+
+    http://dylane-teamfolio-profile.s3-website-us-east-1.amazonaws.com
+
+───────────────────────────────────────────────
+��� Live Website
+───────────────────────────────────────────────
+http://dylane-teamfolio-profile.s3-website-us-east-1.amazonaws.com

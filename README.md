@@ -126,5 +126,10 @@ teamfolio/
 
 ---
 
+<<<<<<< HEAD
 **Deadline:** December 11th, 2025  
 **Team:** Team4Tech  
+=======
+**Deadline:** December 4, 2025  
+**Team:** Team4Tech  
+>>>>>>> 4d003f5eb19fe7c3a94531e764e29dd517c04778
