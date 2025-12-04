@@ -3,6 +3,12 @@
 Welcome to **Teamfolio**, our Team4Tech group project!  
 We’re building a simple **scalable web application on AWS** that showcases our team and individual profiles.
 
+**Live website at:** [teamfoliosolutions.com](https://teamfoliosolutions.com/)
+
+**Confluence:** https://brandoman.atlassian.net/wiki/spaces/TF/overview?homepageId=28049678
+
+**Jira:** https://brandonrandell8.atlassian.net/jira/software/projects/AWS/summary
+
 ---
 
 ## 🎯 Project Overview
@@ -120,5 +126,5 @@ teamfolio/
 
 ---
 
-**Deadline:** December 4, 2025  
+**Deadline:** December 11th, 2025  
 **Team:** Team4Tech  
