@@ -70,4 +70,4 @@ S3 Bucket → Properties → Static Website Hosting → Endpoint
     
 🚀 Live Website
 
-http://divina-teamfolio-profile.s3-website.ca-central-1.amazonaws.com
+Portfolio link : https://divina.teamfoliosolutions.com/
