@@ -2,7 +2,7 @@
 
 BUCKET="divina-teamfolio-profile"
 REGION="ca-central-1"
-CF_DISTRIBUTION_ID="E2J1Y1BNRZ3FSC"
+CF_DISTRIBUTION_ID="E1ZMNDFKGF6406"
 AWS_ACCOUNT_ID="887232293623"
 
 # 1️⃣ Configure S3 as static website
