@@ -4,7 +4,7 @@ A high-performance, minimalist personal portfolio website designed for Cloud Eng
 
 ![Portfolio Preview](https://i.gyazo.com/5a3bd9b5a3cf801f73f8553d20f7a1ce.png)
 
-🔗 **[Live Demo: https://d3msldsb91zfdl.cloudfront.net/#skills](https://d3msldsb91zfdl.cloudfront.net/#skills)**
+🔗 **[Live Demo: https://brandon.teamfoliosolutions.com](https://brandon.teamfoliosolutions.com)**
 
 ![AWS S3](https://img.shields.io/badge/AWS-S3-orange)
 ![AWS CloudFront](https://img.shields.io/badge/AWS-CloudFront-blue)
