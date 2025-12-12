@@ -30,6 +30,8 @@ jobs:
       - name: Create Artifact Zip
         run: |
           cd app
+          # This command automatically zips your new loaderio.txt file
+          # as long as it is inside the 'app' folder!
           zip -r ../app-v1.zip ./*
 
       - name: Configure AWS Credentials
@@ -48,3 +50,16 @@ jobs:
           aws autoscaling start-instance-refresh \
             --auto-scaling-group-name Teamfolio-ASG \
             --preferences '{"InstanceWarmup": 300, "MinHealthyPercentage": 50}'
+
+      # ---------------------------------------------------------
+      # KEEP THESE STEPS! They ensure Loader.io sees the file immediately
+      # ---------------------------------------------------------
+      
+      - name: Wait for ASG Refresh
+        run: sleep 310
+
+      - name: Invalidate CloudFront
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
