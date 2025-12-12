@@ -26,3 +26,5 @@ Teamfolio utilizes a **Hybrid Architecture** combining mutable compute resources
 ### 4. Security Posture
 *   **No SSH:** Port 22 is blocked. Administration is performed via AWS Systems Manager (SSM).
 *   **Private-ish Subnets:** Application servers reside in subnets protected by Security Groups allowing ingress ONLY from the ALB Security Group.
+
+
