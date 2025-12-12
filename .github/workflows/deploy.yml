@@ -12,6 +12,7 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # Set explicit timeout
     
     steps:
       - name: Checkout Code
@@ -25,13 +26,11 @@ jobs:
       - name: Install Dependencies
         run: |
           cd app
-          npm install
+          npm ci  # Use ci instead of install for faster, more reliable builds
 
       - name: Create Artifact Zip
         run: |
           cd app
-          # This command automatically zips your new loaderio.txt file
-          # as long as it is inside the 'app' folder!
           zip -r ../app-v1.zip ./*
 
       - name: Configure AWS Credentials
@@ -51,15 +50,5 @@ jobs:
             --auto-scaling-group-name Teamfolio-ASG \
             --preferences '{"InstanceWarmup": 300, "MinHealthyPercentage": 50}'
 
-      # ---------------------------------------------------------
-      # KEEP THESE STEPS! They ensure Loader.io sees the file immediately
-      # ---------------------------------------------------------
-      
       - name: Wait for ASG Refresh
         run: sleep 310
-
-      - name: Invalidate CloudFront
-        run: |
-          aws cloudfront create-invalidation \
-            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
-            --paths "/*"
